@@ -174,4 +174,4 @@ Fertig. Klingeln → Popup öffnet sich → 📞 antippen zum Sprechen.
 
 ## Lizenz
 
-MIT — siehe [LICENSE](LICENSE). Ursprungskonzept: victorigualada & HA-Community.
+ CC BY-NC 4.0 — siehe [LICENSE](LICENSE). Ursprungskonzept: victorigualada & HA-Community.
