@@ -81,7 +81,7 @@ actions:
           # Live video + 2-way audio
           - type: custom:webrtc-camera
             ui: true
-            url: "{{ stream_name }}"
+            url: "{{ stream_name }}" # insert your Stream url (rtsp://admin:password@ip_address:554/h264Preview_01_sub)
             media: video,audio,microphone
             mode: webrtc
             style:
@@ -125,7 +125,7 @@ actions:
                   action: call-service
                   service: script.turn_on
                   service_data:
-                    entity_id: "{{ unlock }}"
+                    entity_id: "{{ unlock }}" # insert your go2rtc entity id
                 style:
                   left: 50%
                   bottom: 0
