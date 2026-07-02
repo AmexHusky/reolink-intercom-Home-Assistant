@@ -1,0 +1,17 @@
+# Example go2rtc.yaml stream block for a Reolink Video Doorbell.
+# Copy the "streams:" entry into your own go2rtc.yaml and adjust the RTSP line.
+
+streams:
+  reolink_doorbell:
+    # Use the _sub (low-res) stream for lowest latency.
+    - rtsp://USER:PASSWORD@DOORBELL_IP:554/h264Preview_01_sub
+    # Backchannel audio transcode:
+    #   Try pcma first. If your firmware rejects it (no audio / backchannel errors),
+    #   switch to pcmu. Firmware v3.0.0.4662 and newer typically need pcmu.
+    #   #async decouples audio/video timing and is the main latency reducer.
+    - "ffmpeg:reolink_doorbell#audio=pcmu#async"
+
+# Optional: uncomment to see which codec the backchannel negotiates.
+# log:
+#   level: info
+#   exec: trace
